@@ -78,9 +78,11 @@ class MainActivity : ComponentActivity() {
             ),
         )
 
-        lifecycleScope.launch {
+        //Since we should have already inserted the mock job into the db from the master branch,
+        // we do not need to insert here, to check the already existing jobs is present in db.
+        /*lifecycleScope.launch {
             jobDao?.insertJobs(mockJobs)
-        }
+        }*/
 
         val jobsToDisplay = mutableStateListOf<Job>()
 

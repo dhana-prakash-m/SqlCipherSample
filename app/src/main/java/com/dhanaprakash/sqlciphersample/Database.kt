@@ -9,7 +9,8 @@ import net.zetetic.database.sqlcipher.SupportOpenHelperFactory
 
 @androidx.room.Database(
     entities = [Job::class],
-    version = 1,
+    version = 2,
+    autoMigrations = [AutoMigration(from = 1, to = 2)]
 )
 @TypeConverters(TypeConverter::class)
 abstract class Database : RoomDatabase() {

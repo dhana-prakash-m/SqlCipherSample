@@ -16,6 +16,7 @@ data class Job(
 data class JobAttributes(
     val documents: List<DownloadDocument>? = null,
     val clientName: String? = null,
+    val venue: String? = null,
 )
 
 data class DownloadDocument(
